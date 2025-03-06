@@ -1,0 +1,538 @@
+local OrionLib = loadstring(game:HttpGet(('raw.githubusercontent.com/hellohellohell012321/hellohub/main/orionlib.lua')))()
+
+local Window = OrionLib:MakeWindow({Name = "卄乇ㄥㄥㄖ 卄ㄩ乃", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+    
+    OrionLib:MakeNotification({
+        Name = "hi",
+        Content = "yo wsg",
+        Image = "rbxassetid://4483345998"
+    })
+    
+
+    
+    -- PERSONAL STUFF
+    
+    local Tab = Window:MakeTab({
+        Name = "personal stuff",
+        Icon = "rbxassetid://4483345998",
+        PremiumOnly = false
+    })
+    
+    
+    local Section = Tab:AddSection({
+        Name = "presets i use to save time, u can use too idc"
+    })
+    
+    Tab:AddButton({
+        Name = "natural disaster trolling (all guis) (V2)",
+        Callback = function()
+                loadstring(game:HttpGet('https://raw.githubusercontent.com/hellohellohell012321/hellohub/main/scripts/fling_shit/OG_fling_gui.lua', true))() -- OG Fling GUI
+                loadstring(game:HttpGet('https://raw.githubusercontent.com/hellohellohell012321/hellohub/main/scripts/main/infinite_yield.lua'))()  -- Infinite Yield
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/hellohellohell012321/hellohub/main/scripts/main/rochips_panel.lua", true))() -- Rochips Panel
+                loadstring(game:HttpGet("https://pastefy.app/uTgQy8lf/raw"))() -- NDS Hub
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/hellohellohell012321/hellohub/main/scripts/troll_tier_3/kawaii_magnet.lua",true))() -- kawaii magne
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/hellohellohell012321/KAWAII-AURA/main/kawaii_aura.lua", true))() -- kawaii aura
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/hellohellohell012321/hellohub/main/scripts/fling_shit/kawaii_freaky_fling.lua",true))() -- kawaii freaky fling
+        end    
+    })
+    
+    Tab:AddButton({
+        Name = "sigma toolset",
+        Callback = function()
+                loadstring(game:HttpGet(('https://pastebin.com/raw/07GGb4Dk'),true))() -- Telekinesis
+                loadstring(game:HttpGet(('https://pastefy.app/xmlCGdZo/raw'),true))() -- TpTool
+       end    
+    })
+    
+    
+    
+    -- GAMES
+    
+    local Tab = Window:MakeTab({
+        Name = "games",
+        Icon = "rbxassetid://4483345998",
+        PremiumOnly = false
+    })
+    
+    
+    local Section = Tab:AddSection({
+        Name = "cause even leaving the game to the roblox menu is too much work"
+    })
+
+    Tab:AddButton({
+        Name = "natural disaster survival",
+        Callback = function()
+                game:GetService('TeleportService'):Teleport(189707, game.Players.LocalPlayer)
+       end    
+    })
+
+    Tab:AddButton({
+        Name = "therapy",
+        Callback = function()
+                game:GetService('TeleportService'):Teleport(8286149869, game.Players.LocalPlayer)
+       end    
+    })
+
+    Tab:AddButton({
+        Name = "dress to impress",
+        Callback = function()
+                game:GetService('TeleportService'):Teleport(15101393044, game.Players.LocalPlayer)
+       end    
+    })
+
+    Tab:AddButton({
+        Name = "a literal baseplate.",
+        Callback = function()
+                game:GetService('TeleportService'):Teleport(4483381587, game.Players.LocalPlayer)
+       end    
+    })
+
+    Tab:AddButton({
+        Name = "murder mystery 2",
+        Callback = function()
+                game:GetService('TeleportService'):Teleport(142823291, game.Players.LocalPlayer)
+       end    
+    })
+
+    -- FLING SHIT
+    
+    local Tab = Window:MakeTab({
+        Name = "fling shit",
+        Icon = "rbxassetid://4483345998",
+        PremiumOnly = false
+    })
+    
+    
+    local Section = Tab:AddSection({
+        Name = "bully children"
+    })
+    
+    Tab:AddButton({
+        Name = "OG fling gui",
+        Callback = function()
+                loadstring(game:HttpGet('https://raw.githubusercontent.com/hellohellohell012321/hellohub/main/scripts/fling_shit/OG_fling_gui.lua', true))()
+        end    
+    })
+
+    Tab:AddButton({
+        Name = "kawaii freaky fling",
+        Callback = function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/hellohellohell012321/hellohub/main/scripts/fling_shit/kawaii_freaky_fling.lua",true))()
+        end    
+    })
+    
+    Tab:AddButton({
+        Name = "fe fling all",
+        Callback = function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/hellohellohell012321/hellohub/main/scripts/fling_shit/fe_fling_all.lua"))()
+        end    
+    })
+    
+    
+    
+    -- MAIN
+    
+    local Tab = Window:MakeTab({
+        Name = "main",
+        Icon = "rbxassetid://4483345998",
+        PremiumOnly = false
+    })
+    
+    local Section = Tab:AddSection({
+        Name = "most used/common ig"
+    })
+    
+    Tab:AddButton({
+        Name = "inf yield",
+        Callback = function()
+                loadstring(game:HttpGet('https://raw.githubusercontent.com/hellohellohell012321/hellohub/main/scripts/main/infinite_yield.lua'))() 
+        end    
+    })
+
+    Tab:AddButton({
+        Name = "command x",
+        Callback = function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/hellohellohell012321/hellohub/main/scripts/main/command_x.lua", true))()
+        end    
+    })
+    
+    Tab:AddButton({
+        Name = "rochips panel",
+        Callback = function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/hellohellohell012321/hellohub/main/scripts/main/rochips_panel.lua", true))()
+        end    
+    })
+
+    Tab:AddButton({
+        Name = "turtle spy",
+        Callback = function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/hellohellohell012321/hellohub/main/scripts/main/turtle_spy.lua", true))()
+        end    
+    })
+
+
+    
+    -- TROLL TIER 1
+    
+    local Tab = Window:MakeTab({
+        Name = "troll tier 1",
+        Icon = "rbxassetid://4483345998",
+        PremiumOnly = false
+    })
+    
+    local Section = Tab:AddSection({
+        Name = "troll scripts that are'nt that wild but still funny"
+    })
+    
+    Tab:AddButton({
+        Name = "invisible VC trolling (q, e, mouseclick)",
+        Callback = function()
+                loadstring(game:HttpGet(("https://raw.githubusercontent.com/hellohellohell012321/hellohub/main/scripts/troll_tier_1/invisible_vc_trolling.lua"),true))()
+        end     
+    })
+    
+    Tab:AddButton({
+        Name = "rizz!!1",
+        Callback = function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/hellohellohell012321/hellohub/main/scripts/troll_tier_1/rizz.lua"))()
+        end    
+    })
+    
+    
+    
+    -- TROLL TIER 2
+    
+    local Tab = Window:MakeTab({
+        Name = "troll tier 2",
+        Icon = "rbxassetid://4483345998",
+        PremiumOnly = false
+    })
+    
+    local Section = Tab:AddSection({
+        Name = "troll scripts that are pretty wild but not the wildest"
+    })
+    
+    Tab:AddButton({
+        Name = "spiderman mode (z to toggle)",
+        Callback = function()
+                loadstring(game:HttpGet(("https://raw.githubusercontent.com/hellohellohell012321/hellohub/main/scripts/troll_tier_2/walk_on_walls.lua"),true))()
+        end    
+    })
+
+    Tab:AddButton({
+        Name = "obby ruiner",
+        Callback = function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/hellohellohell012321/hellohub/main/scripts/troll_tier_2/obby_ruiner.lua",true))()
+        end    
+    })
+    
+    
+    
+    -- TROLL TIER 3
+    
+    local Tab = Window:MakeTab({
+        Name = "troll tier 3",
+        Icon = "rbxassetid://4483345998",
+        PremiumOnly = false
+    })
+    
+    local Section = Tab:AddSection({
+        Name = "wildest troll scripts."
+    })
+    
+    Tab:AddButton({
+        Name = "parts",
+        Callback = function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/hellohellohell012321/hellohub/main/scripts/troll_tier_3/teleport_unanchored.lua", true))()
+        end    
+    })
+    
+    Tab:AddButton({
+        Name = "black hole (e to tp to mouse)",
+        Callback = function()
+                loadstring(game:HttpGet(('hraw.githubusercontent.com/hellohellohell012321/hellohub/main/scripts/troll_tier_3/black_hole.lua'),true))()
+        end    
+    })
+    
+    Tab:AddButton({
+        Name = "attach to part (c key over mouse) (requires part claim) (use fly+noclip)",
+        Callback = function()
+                loadstring(game:HttpGet(('https://raw.githubusercontent.com/hellohellohell012321/hellohub/main/scripts/troll_tier_3/attach_to_part.lua'),true))()
+        end    
+    })
+    
+    Tab:AddButton({
+        Name = "use da force (requires part claim)",
+        Callback = function()
+                loadstring(game:HttpGet(('https://raw.githubusercontent.com/hellohellohell012321/hellohub/main/scripts/troll_tier_3/telekinesis.lua'),true))()
+        end    
+    })
+
+    Tab:AddButton({
+        Name = "kawaii aura",
+        Callback = function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/hellohellohell012321/KAWAII-AURA/main/kawaii_aura.lua", true))()
+        end    
+    })
+
+    Tab:AddButton({
+        Name = "kawaii magnet part",
+        Callback = function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/hellohellohell012321/hellohub/main/scripts/troll_tier_3/kawaii_magnet.lua",true))()
+        end    
+    })
+    
+
+    
+    -- CHAT
+    
+    local Tab = Window:MakeTab({
+        Name = "chat",
+        Icon = "rbxassetid://4483345998",
+        PremiumOnly = false
+    })
+    
+    Tab:AddButton({
+        Name = "betterbypasser",
+        Callback = function()
+                loadstring(game:HttpGet('https://pastefy.app/1Gzwcjf6/raw'))();
+        end    
+    })
+    
+    Tab:AddButton({
+        Name = "simple bypass",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/SkireScripts/Ouxie/main/Projects/simplebypass.lua"))()
+        end    
+    })
+    
+    Tab:AddButton({
+        Name = "usercreation (.gg/usercreation for key)",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/1price/usercreation/main/UserCreation.lua", true))()
+        end    
+    })
+    
+    Tab:AddButton({
+        Name = "kawaii bypasser",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/hellohellohell012321/KAWAII-BYPASS/main/kawaii-bypass",true))()
+        end    
+    })
+    
+    Tab:AddButton({
+        Name = "anthonys acl",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/AnthonyIsntHere/anthonysrepository/main/scripts/AntiChatLogger.lua", true))()
+        end    
+    })
+    
+    Tab:AddButton({
+        Name = "vadrifts acl (tcs support)",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/vqmpjayZ/More-Scripts/main/Anti-Chat-Logger", true))()
+        end    
+    })
+    
+    
+    
+    -- BASIC
+    
+    local Tab = Window:MakeTab({
+        Name = "basic",
+        Icon = "rbxassetid://4483345998",
+        PremiumOnly = false
+    })
+    
+    local Section = Tab:AddSection({
+        Name = "basic stuff/exploits ig"
+    })
+    
+    Tab:AddButton({
+        Name = "no more kill bloccs!! (toggle wit Z)",
+        Callback = function()
+                loadstring(game:HttpGet(('https://pastebin.com/raw/6g3h9cDB'),true))()
+        end    
+    })
+    
+    Tab:AddButton({
+        Name = "better position teleport",
+        Callback = function()
+                loadstring(game:HttpGet(('https://pastebin.com/raw/6g3h9cDB'),true))()
+        end    
+    })
+    
+    
+    
+    -- OTHER
+    
+    local Tab = Window:MakeTab({
+        Name = "other",
+        Icon = "rbxassetid://4483345998",
+        PremiumOnly = false
+    })
+    
+    local Section = Tab:AddSection({
+        Name = "other scripts"
+    })
+    
+    Tab:AddButton({
+        Name = "pshade shaders",
+        Callback = function()
+                loadstring(game:HttpGet(('https://pastefy.app/xXkUxA0P/raw'),true))()
+        end    
+    })  
+
+    Tab:AddButton({
+        Name = "bring",
+        Callback = function()
+                loadstring(game:HttpGet(('https://pastefy.app/sDprLAXU/raw'),true))()
+        end    
+    }) 
+
+    Tab:AddButton({
+        Name = "byp4ssed",
+        Callback = function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/hellohellohell012321/bypassed/main/main.lua", true))()
+        end    
+    }) 
+
+    Tab:AddButton({
+        Name = "talentless",
+        Callback = function()
+                pcall(function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/hellohellohell012321/TALENTLESS/main/TALENTLESS", true))()
+                end)
+        end    
+    }) 
+
+    -- CLIENT REPLICATION
+    
+    local Tab = Window:MakeTab({
+        Name = "client replication",
+        Icon = "rbxassetid://4483345998",
+        PremiumOnly = false
+    })
+    
+    local Section = Tab:AddSection({
+        Name = "old fe scripts, use in client replication"
+    })
+    
+    Tab:AddButton({
+        Name = "fe script hub",
+        Callback = function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/g00lXploiter/g00lXploiter/main/Fe%20bypass", true))()
+        end    
+    })
+    
+    Tab:AddButton({
+        Name = "c00lgui",
+        Callback = function()
+                loadstring(game:GetObjects('rbxassetid://473373681')[1].Source)()
+        end    
+    })
+    
+    Tab:AddButton({
+        Name = "c00lgui reawakened",
+        Callback = function()
+                loadstring(game:HttpGet("https://pastebin.com/raw/YjjW74s2"))()
+        end    
+    })
+    
+    Tab:AddButton({
+        Name = "",
+        Callback = function()
+                loadstring(game:HttpGet("https://pastebin.com/raw/13Q6rsAA"))()
+        end    
+    })
+
+
+    
+    -- GAME STUFF
+    
+    local Tab = Window:MakeTab({
+        Name = "game stuff",
+        Icon = "rbxassetid://4483345998",
+        PremiumOnly = false
+    })
+    
+    local Section = Tab:AddSection({
+        Name = "gayme"
+    })
+    
+    Tab:AddButton({
+        Name = "toh",
+        Callback = function()
+                loadstring(game:HttpGet('https://pastefy.app/6lrUwZYG/raw'))()
+        end    
+    })
+    
+    Tab:AddButton({
+        Name = "natural disaster hub",
+        Callback = function()
+                loadstring(game:HttpGet("https://pastefy.app/uTgQy8lf/raw"))()
+        end    
+    })
+    
+    Tab:AddButton({
+        Name = "word bomb autotyper (v/b to change speed)",
+        Callback = function()
+            loadstring(game:HttpGet("https://pastefy.app/Bs0pYs5B/raw",true))()
+        end    
+    })
+    
+    Tab:AddButton({
+        Name = "99% fail impossible - pattern memorizer",
+        Callback = function()
+            loadstring(game:HttpGet("https://pastebin.com/raw/FN05gETD",true))()
+        end    
+    })
+    
+    Tab:AddButton({
+        Name = "paris to pees",
+        Callback = function()
+            loadstring(game:HttpGet("https://pastefy.app/83fFk29b/raw",true))()
+        end    
+    })
+    
+    Tab:AddButton({
+        Name = "dress to impress fucker",
+        Callback = function()
+            pcall(function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/hellohellohell012321/DTI-GUI-V2/main/dti_gui_v2.lua",true))()
+            end)
+        end    
+    })
+    
+    Tab:AddButton({
+        Name = "therapy fucker",
+        Callback = function()
+            pcall(function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/hellohellohell012321/therapy-gui/main/therapy-gui.lua", true))()
+            end)
+        end    
+    })
+
+    Tab:AddButton({
+        Name = "rate my avatar fucker",
+        Callback = function()
+            pcall(function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/hellohellohell012321/rate-my-avatar-gui/main/main.lua", true))()
+            end)
+        end    
+    })
+
+    Tab:AddButton({
+        Name = "italy fucker",
+        Callback = function()
+            loadstring(game:HttpGet("https://pastefy.app/QNtTTvXU/raw",true))()
+        end    
+    })
+    
+    Tab:AddButton({
+        Name = "bloxburg - execute then go to blox burger cashier",
+        Callback = function()
+            _G.time = 4 -- how long to auto farm before getting kicked (in hours)
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/ZackDaQuack/blox/main/minimum_wage.lua', true))()
+        end    
+    })
