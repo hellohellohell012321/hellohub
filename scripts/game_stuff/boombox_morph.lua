@@ -429,36 +429,15 @@ TextButton_7.MouseButton1Down:Connect(function()
     local plr = game:GetService("Players").LocalPlayer
     plr.Character.Humanoid:UnequipTools()
     local Tools = plr.Backpack:GetChildren()
-    
-    Tools[1].Grip = CFrame.new(-1, 1, 2.3) * CFrame.Angles(0, math.rad(180), 0.65)
-    Tools[1].Parent = plr.Character
 
-    Tools[2].Grip = CFrame.new(-1, 1, 2.3) * CFrame.Angles(0, math.rad(180), 0.65)
-    Tools[2].Parent = plr.Character
+	    for i = 1, #Tools do
+        if Tools[i] then
+            Tools[i].Grip = CFrame.new(-1, 1, 2.3) * CFrame.Angles(0, math.rad(180), 0.65)
+            Tools[i].Parent = plr.Character
+        end
+    end
 
-    Tools[3].Grip = CFrame.new(-1, 1, 2.3) * CFrame.Angles(0, math.rad(180), 0.65)
-    Tools[3].Parent = plr.Character
-
-    Tools[4].Grip = CFrame.new(-1, 1, 2.3) * CFrame.Angles(0, math.rad(180), 0.65)
-    Tools[4].Parent = plr.Character
-
-    Tools[5].Grip = CFrame.new(-1, 1, 2.3) * CFrame.Angles(0, math.rad(180), 0.65)
-    Tools[5].Parent = plr.Character
-
-    Tools[6].Grip = CFrame.new(-1, 1, 2.3) * CFrame.Angles(0, math.rad(180), 0.65)
-    Tools[6].Parent = plr.Character
-
-    Tools[7].Grip = CFrame.new(-1, 1, 2.3) * CFrame.Angles(0, math.rad(180), 0.65)
-    Tools[7].Parent = plr.Character
-
-    Tools[8].Grip = CFrame.new(-1, 1, 2.3) * CFrame.Angles(0, math.rad(180), 0.65)
-    Tools[8].Parent = plr.Character
-
-    Tools[9].Grip = CFrame.new(-1, 1, 2.3) * CFrame.Angles(0, math.rad(180), 0.65)
-    Tools[9].Parent = plr.Character
-
-    Tools[10].Grip = CFrame.new(-1, 1, 2.3) * CFrame.Angles(0, math.rad(180), 0.65)
-    Tools[10].Parent = plr.Character
+		
 end)
 
 TextButton_8.Parent = HUBSTAB
