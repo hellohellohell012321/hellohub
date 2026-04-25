@@ -3,45 +3,16 @@
 -- this script was made so i could have all the scripts i use (and scripts my friends use) in one GUI
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/shidemuri/scripts/main/ui_lib.lua"))()
 local Pendulum = Library:New("noras fe script hub")
-local Luckygiver = Pendulum:NewTab("FE Scripts")
-
-local app = Pendulum:NewTab("Apples to Pears")
-
-local mydadismad = Pendulum:NewTab("Custom Deck")
 
 
-Luckygiver:NewButton("walk on walls", "walking on walls pretty basic", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/5T7KsEWy", true))()
-end)
-
-Luckygiver:NewButton("Infinite Yield", "Executes Infinite Yield FE Admin", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source", true))()
-end)
-
- 
-
-app:NewButton("Wild Pears", "chooses wild pears", function()
-    local args = {
-        [1] = 2
-    }
-    
-    game:GetService("ReplicatedStorage"):WaitForChild("NR"):FireServer(unpack(args))
-end)
-
-app:NewButton("LOOP Wild Pears", "chooses wild pears forever :b", function()
-    while wait(2) do
-        local args = {
-            [1] = 2
-        }
-    
-        game:GetService("ReplicatedStorage"):WaitForChild("NR"):FireServer(unpack(args))
-    end
-end)
-
-local customcard = app:NewTextBar("custom card", "geenie", "", function() end)
 
 
-app:NewButton("play custom card", "play ur card u just put in", function()
+local exploitstab = Pendulum:NewTab("Exploits")
+
+local customcard = exploitstab:NewTextBar("custom card", "geenie", "", function() end)
+
+
+exploitstab:NewButton("play custom card", "play ur card u just put in", function()
     print(customcard.Text)
     local args = {
         [1] = customcard.Text
@@ -50,7 +21,7 @@ app:NewButton("play custom card", "play ur card u just put in", function()
     game:GetService("ReplicatedStorage"):WaitForChild("CC"):FireServer(unpack(args))
 end)
 
-app:NewButton("Show Mystery Cards", "uhhh my dad got mad", function()
+exploitstab:NewButton("Show Mystery Cards", "uhhh my dad got mad", function()
     while wait(2) do
         card = workspace.red.Value
         card1 = workspace.red.d1.Value
@@ -61,28 +32,21 @@ app:NewButton("Show Mystery Cards", "uhhh my dad got mad", function()
     end
 end)
 
-
-
-app:NewButton("spam reactions", "spams every reaction", function()
-    -- List of arguments to loop through
+exploitstab:NewButton("spam reactions", "spams every reaction", function()
     local reactions = {"Skull", "Sob", "Cry", "Thumbs", "Thumbsd"}
     
-    -- Reference to the remote event
     local remoteEvent = game:GetService("ReplicatedStorage"):WaitForChild("ReactionSend")
     
-    -- Function to send the reaction
     local function sendReaction(reaction)
         remoteEvent:FireServer(reaction)
     end
     
-    -- Start time
     local startTime = tick()
     
-    -- Loop for 10 seconds
     while tick() - startTime < 10 do
         for _, reaction in ipairs(reactions) do
             sendReaction(reaction)
-            wait(0) -- Adjust the wait time as needed
+            task.wait()
             if tick() - startTime >= 10 then
                 break
             end
@@ -90,38 +54,80 @@ app:NewButton("spam reactions", "spams every reaction", function()
     end
 end)
 
-mydadismad:NewLabel("THIS WILL MAKE YOU REJOIN!!")
-mydadismad:NewLabel("play a custom card via other menu for 2 cards")
-
-local custom1 = mydadismad:NewTextBar("custom card 1", "geenie1", "", function()
-end)
-local custom2 = mydadismad:NewTextBar("custom card 2", "geenie2", "", function()
-end)
-local custom3 = mydadismad:NewTextBar("custom card 3", "geenie", "", function()
-end)
-local custom4 = mydadismad:NewTextBar("custom card 4", "geenie", "", function()
-end)
-local custom5 = mydadismad:NewTextBar("custom card 5", "geenie", "", function()
-end)
-local custom6 = mydadismad:NewTextBar("custom card 6", "geenie", "", function()
-end)
-local custom7 = mydadismad:NewTextBar("custom card 7", "geenie", "", function()
+exploitstab:NewButton("show chat as judge", "yep", function()
+    game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Chat, true)
 end)
 
-mydadismad:NewButton("make deck", "creates custom deck", function()
+exploitstab:NewButton("Infinite Yield", "Executes Infinite Yield FE Admin", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source", true))()
+end)
+
+ 
+
+local gametab = Pendulum:NewTab("Game")
+
+gametab:NewButton("Flipped Pears", "chooses", function()
     local args = {
-        [1] = custom1.Text,
-        [2] = custom2.Text,
-        [3] = custom3.Text,
-        [4] = custom4.Text,
-        [5] = custom5.Text,
-        [6] = custom6.Text,
-        [7] = custom7.Text
+        [1] = 1
     }
+    
+    game:GetService("ReplicatedStorage"):WaitForChild("NR"):FireServer(unpack(args))
+end)
 
-    game:GetService("ReplicatedStorage"):WaitForChild("UpdateCardData"):FireServer(unpack(args))
-    wait(1)
-    local ts = game:GetService("TeleportService")
-    local p = game:GetService("Players").LocalPlayer
-    ts:TeleportToPlaceInstance(game.PlaceId, game.JobId, p)
+gametab:NewButton("Wild Pears", "chooses", function()
+    local args = {
+        [1] = 2
+    }
+    
+    game:GetService("ReplicatedStorage"):WaitForChild("NR"):FireServer(unpack(args))
+end)
+
+gametab:NewButton("Rotten Pears", "chooses", function()
+    local args = {
+        [1] = 3
+    }
+    
+    game:GetService("ReplicatedStorage"):WaitForChild("NR"):FireServer(unpack(args))
+end)
+
+gametab:NewButton("Mystery Pear", "chooses", function()
+    local args = {
+        [1] = 4
+    }
+    
+    game:GetService("ReplicatedStorage"):WaitForChild("NR"):FireServer(unpack(args))
+end)
+
+
+
+local customtab = Pendulum:NewTab("Custom Deck")
+
+local custom1 = customtab:NewTextBar("custom card 1", "geenie1", "", function()
+end)
+local custom2 = customtab:NewTextBar("custom card 2", "geenie2", "", function()
+end)
+local custom3 = customtab:NewTextBar("custom card 3", "geenie", "", function()
+end)
+local custom4 = customtab:NewTextBar("custom card 4", "geenie", "", function()
+end)
+local custom5 = customtab:NewTextBar("custom card 5", "geenie", "", function()
+end)
+local custom6 = customtab:NewTextBar("custom card 6", "geenie", "", function()
+end)
+local custom7 = customtab:NewTextBar("custom card 7", "geenie", "", function()
+end)
+
+customtab:NewButton("make deck", "creates custom deck", function()
+    
+    local customboxes = {custom1, custom2, custom3, custom4, custom5, custom6, custom7}
+
+    for i = 1, 7 do
+        if customboxes[i].Text ~= "" then
+            local args = {
+                customboxes[i].Text,
+                i
+            }
+            game:GetService("ReplicatedStorage"):WaitForChild("CustomC"):FireServer(unpack(args))            
+        end
+    end
 end)
